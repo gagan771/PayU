@@ -10,15 +10,17 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/db": "*",
     "@repo/ui": "*",
     "next": "15.0.3",
+    "next-auth": "^4.24.10",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "@repo/db": "*"
+    "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
@@ -27,7 +29,7 @@
     "eslint-config-next": "15.0.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
-    "typescript": "5.5.4",
-    "turbo": "^1.0.0"
+    "turbo": "^1.0.0",
+    "typescript": "5.5.4"
   }
 }
