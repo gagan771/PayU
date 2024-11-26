@@ -1,6 +1,5 @@
+// eslint-disable-next-line no-unused-vars
 import { PrismaClient } from "@repo/db/client";
-const client = new PrismaClient();
-
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
