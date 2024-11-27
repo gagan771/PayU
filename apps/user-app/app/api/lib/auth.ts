@@ -1,4 +1,4 @@
-import { db } from "@repo/db";
+import { db } from "@repo/db/client";
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcrypt";
 
@@ -7,8 +7,8 @@ export const authOptions = {
       CredentialsProvider({
           name: 'Credentials',
           credentials: {
-            phone: { label: "Phone number", type: "text", placeholder: "1231231231", required: true },
-            password: { label: "Password", type: "password", required: true }
+            phone: { label: "Phone number", type: "text", placeholder: "1231231231" },
+            password: { label: "Password", type: "password" }
           },
           // TODO: User credentials type from next-aut
           async authorize(credentials: any) {
@@ -53,7 +53,6 @@ export const authOptions = {
           },
         })
     ],
-    // eslint-disable-next-line turbo/no-undeclared-env-vars
     secret: process.env.JWT_SECRET || "secret",
     callbacks: {
         // TODO: can u fix the type here? Using any is bad
@@ -64,4 +63,4 @@ export const authOptions = {
         }
     }
   }
-  
+ 
